@@ -7,46 +7,46 @@ def jiaoshikongzhitai():
 	if kongzhitaijianru==1:
 		timu1=input("请输入第一个题目")
 		filename="timu1.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(timu1)
 		timu2=input("请输入第二个题目")
 		filename="timu2.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(timu2)
 		timu3=input("请输入第三个题目")
 		filename="timu3.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(timu3)
 		timu4=input("请输入第四个题目")
 		filename="timu4.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(timu4)
 		timu5=input("请输入第五个题目")
 		filename="timu5.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(timu5)
 		print("已完成所有题目修改，已经进入主菜单。！！！现在不可以进行考试，答案还未录入！！！")
 		jiaoshikongzhitai()
 	elif kongzhitaijianru==2:
 		daan1=input("请输入第一个题目的答案")
 		filename="daan1.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(daan1)
 		daan2=input("请输入第2个题目的答案")
 		filename="daan2.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(daan2)
 		daan3=input("请输入第3个题目的答案")
 		filename="daan3.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(daan3)
 		daan4=input("请输入第4个题目的答案")
 		filename="daan4.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(daan4)
 		daan5=input("请输入第5个题目的答案")
 		filename="daan5.txt"
-		with open(filename,"a")as file_object:
+		with open(filename,"w")as file_object:
 			file_object.write(daan5)
 		print("所有答案已经录入完毕，可以进行考试。考试方法：关闭教师端，启动学生端 ")
 		print("注意：不得删除同文件夹下的任何txt文件")
@@ -103,6 +103,16 @@ with open(filename)as file_object:
 
 
 #程序结束  ©版权所有，侵版必究  2019 汪俊择 123ABCDF11345
+
+		
+
+
+
+
+		
+
+
+
 
 		
 
