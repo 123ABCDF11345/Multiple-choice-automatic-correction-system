@@ -1,5 +1,6 @@
 #coding=utf-8
 import json
+import time
 def jiaoshikongzhitai():
 	shurutishi="按1进入题目修改（必设），按2进入答案修改，按3显示分数，"
 	shurutishi2="按4改密码，按5查看关于作者的信息，按6设置考试人数（必设）：   "
@@ -113,8 +114,11 @@ def jiaoshikongzhitai():
 			jiaoshikongzhitai()
 
 print("本程序需要配合学生端使用！")
-print("注意！！！本程序仅限在中国大陆范围内使用！  attention! ! ! This program is only available in mainland China!")
+print("")
 print("本程序需要在源码所在的目录创建一个叫“mima.txt”的文件方可运行！")
+print("由于本文件需要读取写入外部文件，此文件不可在终端运行！")
+print("如果你已经打开终端，请关闭，5秒后将载入程序主要模块，即时可能会报错！！")
+time.sleep(5)
 print("强烈建议您使用GitHub上下载的文件，自动提供基本文件！")
 filename="mima.txt"
 try:
@@ -143,5 +147,3 @@ else:
 			else:
 				print("您输入的密码错误！")  
 #程序结束  ©版权所有，侵版必究  2019 汪俊择 123ABCDF11345
-
-
