@@ -1,10 +1,10 @@
 #coding=utf-8
 import json
 import time
+import requests
 def jiaoshikongzhitai():
-	shurutishi="按1进入题目修改（必设），按2进入答案修改，按3显示分数，"
-	shurutishi2="按4改密码，按5查看关于作者的信息，按6设置考试人数（必设）：   "
-	kongzhitaijianru=input(shurutishi+shurutishi2)
+	shurutishi="按1进入考前设置，按2进入成绩管理，按3显示软件相关信息"
+	kongzhitaijianru=input(shurutish)
 	try:
 		kongzhitaijianru=int(kongzhitaijianru)
 	except ValueError:
@@ -32,9 +32,7 @@ def jiaoshikongzhitai():
 			filename="timu5.txt"
 			with open(filename,"w")as file_object:
 				file_object.write(timu5)
-			print("已完成所有题目修改，已经进入主菜单。！！！现在不可以进行考试，答案还未录入！！！")
-			jiaoshikongzhitai()
-		elif kongzhitaijianru==2:
+			print("已完成所有题目修改。准备进入答案录入")
 			daan1=input("请输入第一个题目的答案：  ")
 			filename="daan1.txt"
 			with open(filename,"w")as file_object:
@@ -55,15 +53,20 @@ def jiaoshikongzhitai():
 			filename="daan5.txt"
 			with open(filename,"w")as file_object:
 				file_object.write(daan5)
-			print("所有答案已经录入完毕，现在不可以进行考试！请录入人数！")
+			print("所有答案已经录入完毕，即将进入人数录入")
+			jianrurenshu=input("请输入本次考试的人数： ")
+			filename="renshu.txt"
+			with open(filename,"w")as file_object:
+				file_object.write(jianrurenshu)
+			print("输入完成，即将返回主菜单。可以考试，考试方法：关闭教师端，启动学生端 ")
 			print("注意：不得删除同文件夹下的任何txt文件")
 			print("作者友情提醒您：考试并不能反映一个学生的成绩水平，请勿擅作主张")
 			print("即将返回主菜单")
 			jiaoshikongzhitai()
-		elif kongzhitaijianru==3:
+		elif kongzhitaijianru==2:
 			print("先行说明：本功能只有在已经进行过至少一次学生端考试时可以使用！")
 			print("否则可能报错或者没有输出")
-			filename='chengji.json'
+			filename='chengji.txt'
 			try:
 				with open(filename)as file_object:
 					chengjizidian=file_object.read()
@@ -87,7 +90,7 @@ def jiaoshikongzhitai():
 				file_object.write(zidingyimima)
 			print("密码更改完成，请牢记"+zidingyimima)
 			jiaoshikongzhitai()
-		elif kongzhitaijianru==5:
+		elif kongzhitaijianru==3:
 			print("本程序由汪俊择编写")
 			print("隐私申明：本程序不会收集任何数据至网络。")
 			print("本程序不会与其他程序（除记事本，学生端）进行主动访问")
@@ -99,14 +102,6 @@ def jiaoshikongzhitai():
 			print("本程序仅限在中国大陆范围内使用！  This program is only available in mainland China!")
 			print("作者联系方式：邮箱2542594900@qq.com  GitHub：123ABCDF11345")
 			print("即将返回主菜单")
-			jiaoshikongzhitai()
-		elif kongzhitaijianru==6:
-			jianrurenshu=input("请输入本次考试的人数： ")
-			
-			filename="renshu.txt"
-			with open(filename,"w")as file_object:
-				file_object.write(jianrurenshu)
-			print("输入完成，即将返回主菜单。可以考试，考试方法：关闭教师端，启动学生端 ")
 			jiaoshikongzhitai()
 		else:
 			print("无效的指令")
