@@ -2,7 +2,7 @@ import json
 import time
 import requests
 def jiaoshikongzhitai():
-    shurutishi="按1进入考前设置，按2进入成绩管理，按3显示软件相关信息"
+    shurutishi="按1进入考前设置，按2进入成绩管理，按3显示软件相关信息，按4更改密码"
     kongzhitaijianru=input(shurutishi)
     try:
         kongzhitaijianru=int(kongzhitaijianru)
@@ -72,8 +72,8 @@ def jiaoshikongzhitai():
                     cgzz=str(cgzz)
                     a=eval(cgzz)
                     for cg,xm in a.items():
-                        print("\n姓名："+xm)
-                        print("\n成绩："+cg)
+                        print("\n姓名："+cg)
+                        print("成绩："+xm)
             except FileNotFoundError:
                 print("   ")
                 print("   ")
@@ -83,7 +83,7 @@ def jiaoshikongzhitai():
                 print("输出完成！已经返回主菜单")
                 jiaoshikongzhitai()
         elif kongzhitaijianru==4:
-            zidingyimima=input("请输入您的新密码")
+            zidingyimima=input("请输入您的新密码（暂时只支持数字）")
             filename="mima.txt"
             with open(filename,"w")as file_object:
                 file_object.write(zidingyimima)
@@ -93,7 +93,7 @@ def jiaoshikongzhitai():
             print("本程序由汪俊择编写")
             print("隐私申明：本程序不会收集任何数据至网络。")
             print("本程序不会与其他程序（除记事本，学生端）进行主动访问")
-            print("免责申明：本程序的建立初衷是搭建智能考试计划的一部分，如有人将")
+            print("免责申明：本程序的建立初衷是搭建智能考试计划的一部分，如有人将软件")
             print("作其他用途，作者不负任何责任，一切责任由当事人自行承担")
             print("汪俊择保留对此程序及学生端程序的解释权和所有权")
             print("作者有权随时更改程序源码/停止公开源码/更新作者相关的申明")
@@ -112,7 +112,7 @@ print("")
 print("本程序需要在源码所在的目录创建一个叫“mima.txt”的文件方可运行！")
 print("由于本文件需要读取写入外部文件，此文件不可在终端运行！")
 print("如果你已经打开终端，请关闭，5秒后将载入程序主要模块，即时可能会报错！！")
-time.sleep(5)
+time.sleep(3)
 print("强烈建议您使用GitHub上下载的文件，自动提供基本文件！")
 filename="mima.txt"
 try:
@@ -125,7 +125,7 @@ except FileNotFoundError:
     print("程序结束，请在建立基本文件后再启动")
 else:
     print("初始密码为0000")
-    jianrumima=input("请输入密码，密码长度1-8位，无密码回车进入系统  不知道密码？直接回车试试：   ")
+    jianrumima=input("请输入密码，密码长度1-8位：   ")
     try:
         jianrumima=int(jianrumima)
     except ValueError:
