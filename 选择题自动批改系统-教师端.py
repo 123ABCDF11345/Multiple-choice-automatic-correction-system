@@ -97,9 +97,9 @@ def jiaoshikongzhitai():
             print("作其他用途，作者不负任何责任，一切责任由当事人自行承担")
             print("汪俊择保留对此程序及学生端程序的解释权和所有权")
             print("作者有权随时更改程序源码/停止公开源码/更新作者相关的申明")
-            print("©版权所有，侵版必究  2019 汪俊择 123ABCDF11345")
+            print("©版权所有，侵版必究  2019  123ABCDF11345")
             print("本程序仅限在中国大陆范围内使用！  This program is only available in mainland China!")
-            print("作者联系方式：邮箱2542594900@qq.com  GitHub：123ABCDF11345")
+            print("作者联系方式：GitHub：123ABCDF11345")
             print("即将返回主菜单")
             jiaoshikongzhitai()
         else:
@@ -140,4 +140,4 @@ else:
                 jiaoshikongzhitai()
             else:
                 print("您输入的密码错误！")  
-#程序结束  ©版权所有，侵版必究  2019 汪俊择 123ABCDF11345
+#程序结束  ©版权所有，侵版必究  2019  123ABCDF11345
